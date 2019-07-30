@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E4CDA3622F03F5600DFE95C /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4CDA3522F03F5600DFE95C /* UniKit.xcframework */; };
-		4E4CDA3722F03F5600DFE95C /* UniKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4CDA3522F03F5600DFE95C /* UniKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E7E0E7822F03DBB008A6587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E0E7722F03DBB008A6587 /* AppDelegate.swift */; };
 		4E7E0E7A22F03DBB008A6587 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E0E7922F03DBB008A6587 /* ViewController.swift */; };
 		4E7E0E7D22F03DBB008A6587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E0E7B22F03DBB008A6587 /* Main.storyboard */; };
 		4E7E0E7F22F03DC0008A6587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E0E7E22F03DC0008A6587 /* Assets.xcassets */; };
+		4E996DCA22F10BD0009C5E7F /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E996DC922F10BD0009C5E7F /* UniKit.xcframework */; };
+		4E996DCB22F10BD0009C5E7F /* UniKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E996DC922F10BD0009C5E7F /* UniKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4E4CDA3822F03F5600DFE95C /* Embed Frameworks */ = {
+		4E996DCC22F10BD0009C5E7F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E4CDA3722F03F5600DFE95C /* UniKit.xcframework in Embed Frameworks */,
+				4E996DCB22F10BD0009C5E7F /* UniKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,13 +30,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E4CDA3522F03F5600DFE95C /* UniKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKit.xcframework; path = ../UniKit/UniKit.xcframework; sourceTree = "<group>"; };
 		4E7E0E7422F03DBB008A6587 /* UniversalTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7E0E7722F03DBB008A6587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E7E0E7922F03DBB008A6587 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E7E0E7C22F03DBB008A6587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E7E0E7E22F03DC0008A6587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E7E0E8022F03DC0008A6587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E996DC922F10BD0009C5E7F /* UniKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKit.xcframework; path = ../UniKit/UniKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4CDA3622F03F5600DFE95C /* UniKit.xcframework in Frameworks */,
+				4E996DCA22F10BD0009C5E7F /* UniKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 		4E4CDA3422F03F5500DFE95C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E4CDA3522F03F5600DFE95C /* UniKit.xcframework */,
+				4E996DC922F10BD0009C5E7F /* UniKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 				4E7E0E7022F03DBB008A6587 /* Sources */,
 				4E7E0E7122F03DBB008A6587 /* Frameworks */,
 				4E7E0E7222F03DBB008A6587 /* Resources */,
-				4E4CDA3822F03F5600DFE95C /* Embed Frameworks */,
+				4E996DCC22F10BD0009C5E7F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,13 +297,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42UG2T5UXS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UniversalTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.UniversalTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.UniversalTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -315,13 +315,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42UG2T5UXS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UniversalTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.UniversalTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.UniversalTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

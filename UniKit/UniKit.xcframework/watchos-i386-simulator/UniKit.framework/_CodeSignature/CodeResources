@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PU6CuIx0iNEPSG01F5VtzKv8GJE=
+		DLtyF82wh8LP+WNeq/XopGMTiIY=
 		</data>
 		<key>Modules/UniKit.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/UniKit.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		AH4nFY1DRiaMXfFbZwxuZy3mfmA=
+		eVNfMrZOwsbP8YnzDWLhbsPMVyI=
 		</data>
 		<key>Modules/UniKit.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/UniKit.swiftmodule/i386.swiftmodule</key>
 		<data>
-		AH4nFY1DRiaMXfFbZwxuZy3mfmA=
+		eVNfMrZOwsbP8YnzDWLhbsPMVyI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bMWszrdXJMFixyWCjhBHh7kpOn7nRs12PA20AIk6ZoY=
+			Eq6L9CqzNBko/Y4c3QqEqaf4QVD4ALKJXZrW0Zhl1gc=
 			</data>
 		</dict>
 		<key>Modules/UniKit.swiftmodule/i386.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bMWszrdXJMFixyWCjhBHh7kpOn7nRs12PA20AIk6ZoY=
+			Eq6L9CqzNBko/Y4c3QqEqaf4QVD4ALKJXZrW0Zhl1gc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

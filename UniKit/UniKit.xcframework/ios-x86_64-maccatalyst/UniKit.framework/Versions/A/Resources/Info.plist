@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>UniKit</string>
 	<key>CFBundleIdentifier</key>
-	<string>maccatalyst.com.marizack.UniKit</string>
+	<string>maccatalyst.com.mycompany.UniKit</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

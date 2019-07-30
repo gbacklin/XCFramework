@@ -8,12 +8,6 @@ echo "Initiaslizing work area..."
 if [ -d "./"$FRAMEWORK".xcframework" ]; then
 rm -rf "./"$FRAMEWORK".xcframework"
 fi
-if [ -d "./"$FRAMEWORK"T.xcarchive" ]; then
-rm -rf "./"$FRAMEWORK"T.xcarchive"
-fi
-if [ -d "./"$FRAMEWORK"TS.xcarchive" ]; then
-rm -rf "./"$FRAMEWORK"TS.xcarchive"
-fi
 if [ -d "./"$FRAMEWORK"S.xcarchive" ]; then
 rm -rf "./"$FRAMEWORK"S.xcarchive"
 fi
@@ -32,16 +26,17 @@ fi
 if [ -d "./"$FRAMEWORK"MC.xcarchive" ]; then
 rm -rf "./"$FRAMEWORK"MC.xcarchive"
 fi
+if [ -d "./"$FRAMEWORK"T.xcarchive" ]; then
+rm -rf "./"$FRAMEWORK"T.xcarchive"
+fi
+if [ -d "./"$FRAMEWORK"TS.xcarchive" ]; then
+rm -rf "./"$FRAMEWORK"TS.xcarchive"
+fi
 
 echo "Archiving..."
 sudo xcode-select -switch /Applications/XcodeBeta/Xcode-beta.app
 
-xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
-    -sdk appletvos \
-    -archivePath "$FRAMEWORK"T.xcarchive SKIP_INSTALL=NO clean
-xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
-    -sdk appletvsimulator \
-    -archivePath "$FRAMEWORK"TS.xcarchive SKIP_INSTALL=NO clean
+# iOS
 xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -sdk iphoneos \
     -archivePath "$FRAMEWORK"D.xcarchive SKIP_INSTALL=NO clean
@@ -49,6 +44,8 @@ xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -sdk iphonesimulator \
     -destination "name=iPhone Xʀ" \
     -archivePath "$FRAMEWORK"S.xcarchive SKIP_INSTALL=NO clean
+
+# watchOS
 xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -sdk watchos \
     -destination "name=Apple Watch Series 4 - 44mm" \
@@ -57,12 +54,22 @@ xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -sdk watchsimulator \
     -destination "name=Apple Watch Series 4 - 44mm" \
     -archivePath "$FRAMEWORK"WS.xcarchive SKIP_INSTALL=NO clean
+
+# macOS
 xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -sdk macosx \
     -archivePath "$FRAMEWORK"M.xcarchive SKIP_INSTALL=NO clean
 xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
     -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' \
     -archivePath "$FRAMEWORK"MC.xcarchive SKIP_INSTALL=NO clean
+
+# tvOS
+xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
+    -sdk appletvos \
+    -archivePath "$FRAMEWORK"T.xcarchive SKIP_INSTALL=NO clean
+xcodebuild archive -project "$FRAMEWORK".xcodeproj -scheme "$FRAMEWORK" \
+    -sdk appletvsimulator \
+    -archivePath "$FRAMEWORK"TS.xcarchive SKIP_INSTALL=NO clean
 
 echo "Creating XCFramework..."
 xcodebuild -create-xcframework \
