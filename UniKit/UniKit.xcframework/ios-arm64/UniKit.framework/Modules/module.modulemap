@@ -1,0 +1,11 @@
+framework module UniKit {
+  umbrella header "UniKit.h"
+
+  export *
+  module * { export * }
+}
+
+module UniKit.Swift {
+    header "UniKit-Swift.h"
+    requires objc
+}
