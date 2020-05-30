@@ -11,7 +11,8 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 4EF563F12481E6EC00564840 /* Build configuration list for PBXAggregateTarget "XCFrameworks" */;
 			buildPhases = (
-				4EF563F22481E6F300564840 /* ShellScript */,
+				4EF563F22481E6F300564840 /* Create iOS macOS XCFramework */,
+				4EB32D88248207330060D50E /* Create watchOS XCFramework */,
 			);
 			dependencies = (
 			);
@@ -23,6 +24,8 @@
 /* Begin PBXBuildFile section */
 		4E30AB7122EFCAFF008FDE7A /* UniKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E30AB6F22EFCAFF008FDE7A /* UniKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E99260522F107AE00B2401F /* UniKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99260422F107AE00B2401F /* UniKit.swift */; };
+		4EB32D92248209C10060D50E /* UniKitWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB32D90248209C10060D50E /* UniKitWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EB32D96248209CA0060D50E /* UniKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99260422F107AE00B2401F /* UniKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +33,20 @@
 		4E30AB6F22EFCAFF008FDE7A /* UniKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniKit.h; sourceTree = "<group>"; };
 		4E30AB7022EFCAFF008FDE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E99260422F107AE00B2401F /* UniKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniKit.swift; sourceTree = "<group>"; };
+		4EB32D8E248209C10060D50E /* UniKitWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UniKitWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB32D90248209C10060D50E /* UniKitWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniKitWatch.h; sourceTree = "<group>"; };
+		4EB32D91248209C10060D50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E30AB6922EFCAFF008FDE7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB32D8B248209C10060D50E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4E30AB6E22EFCAFF008FDE7A /* UniKit */,
+				4EB32D8F248209C10060D50E /* UniKitWatch */,
 				4E30AB6D22EFCAFF008FDE7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				4E30AB6C22EFCAFF008FDE7A /* UniKit.framework */,
+				4EB32D8E248209C10060D50E /* UniKitWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +92,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		4EB32D8F248209C10060D50E /* UniKitWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4EB32D90248209C10060D50E /* UniKitWatch.h */,
+				4EB32D91248209C10060D50E /* Info.plist */,
+			);
+			path = UniKitWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -85,6 +109,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E30AB7122EFCAFF008FDE7A /* UniKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB32D89248209C10060D50E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB32D92248209C10060D50E /* UniKitWatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +142,24 @@
 			productReference = 4E30AB6C22EFCAFF008FDE7A /* UniKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		4EB32D8D248209C10060D50E /* UniKitWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB32D93248209C10060D50E /* Build configuration list for PBXNativeTarget "UniKitWatch" */;
+			buildPhases = (
+				4EB32D89248209C10060D50E /* Headers */,
+				4EB32D8A248209C10060D50E /* Sources */,
+				4EB32D8B248209C10060D50E /* Frameworks */,
+				4EB32D8C248209C10060D50E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UniKitWatch;
+			productName = UniKitWatch;
+			productReference = 4EB32D8E248209C10060D50E /* UniKitWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,6 +171,9 @@
 				TargetAttributes = {
 					4E30AB6B22EFCAFF008FDE7A = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					4EB32D8D248209C10060D50E = {
+						CreatedOnToolsVersion = 11.5;
 					};
 					4EF563EE2481E6EC00564840 = {
 						CreatedOnToolsVersion = 11.5;
@@ -142,12 +195,20 @@
 			targets = (
 				4E30AB6B22EFCAFF008FDE7A /* UniKit */,
 				4EF563EE2481E6EC00564840 /* XCFrameworks */,
+				4EB32D8D248209C10060D50E /* UniKitWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E30AB6A22EFCAFF008FDE7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB32D8C248209C10060D50E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,7 +235,7 @@
 			shellPath = /bin/sh;
 			shellScript = "#In Xcode, the framework search path build setting determines where the linker looks for frameworks at link time. Since your app target attempts to link to RealmSwift.framework (as a result of importing ParentFramework), RealmSwift.framework needs to be available on the framework search path.\n\n#It's important to note that while nested frameworks work in the iOS simulator and even locally on your device, iTunes Connect rejects app bundles that contain nested frameworks. The expected pattern is that all frameworks are embedded directly within the app.\n\necho \"*** Copying the framework ***\"\n\nPRODUCT_PATH=\"${BUILT_PRODUCTS_DIR}/${PROJECT_NAME}.framework\"\n\nFRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nrm -rf \"${FRAMEWORK_PATH}\"\nmkdir \"${FRAMEWORK_PATH}\"\n\ncp -r \"${PRODUCT_PATH}\" \"${FRAMEWORK_PATH}/${PROJECT_NAME}.framework\"\n";
 		};
-		4EF563F22481E6F300564840 /* ShellScript */ = {
+		4EB32D88248207330060D50E /* Create watchOS XCFramework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,13 +244,32 @@
 			);
 			inputPaths = (
 			);
+			name = "Create watchOS XCFramework";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"generic/platform=iOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=iOS Simulator,name=iPhone 11\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS,variant=Mac Catalyst\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\n\n\n";
+			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchos -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchsimulator -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\n";
+		};
+		4EF563F22481E6F300564840 /* Create iOS macOS XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create iOS macOS XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}.framework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}.framework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}.framework\"\nfi\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"generic/platform=iOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=iOS Simulator,name=iPhone 11\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS,variant=Mac Catalyst\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -199,6 +279,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E99260522F107AE00B2401F /* UniKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB32D8A248209C10060D50E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB32D96248209CA0060D50E /* UniKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +469,60 @@
 			};
 			name = Release;
 		};
+		4EB32D94248209C10060D50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UniKitWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.UniKitWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		4EB32D95248209C10060D50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UniKitWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.UniKitWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 		4EF563EF2481E6EC00564840 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -416,6 +558,15 @@
 			buildConfigurations = (
 				4E30AB7522EFCAFF008FDE7A /* Debug */,
 				4E30AB7622EFCAFF008FDE7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB32D93248209C10060D50E /* Build configuration list for PBXNativeTarget "UniKitWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB32D94248209C10060D50E /* Debug */,
+				4EB32D95248209C10060D50E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
