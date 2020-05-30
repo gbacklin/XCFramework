@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EF19E6D24821E15001D478A /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; };
-		4EF19E6E24821E15001D478A /* UniKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4EF19E7624821F05001D478A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF19E7424821F05001D478A /* Interface.storyboard */; };
 		4EF19E7824821F05001D478A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF19E7724821F05001D478A /* Assets.xcassets */; };
 		4EF19E7F24821F06001D478A /* TestXCFrameworkWatchUI Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EF19E7E24821F06001D478A /* TestXCFrameworkWatchUI Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -20,8 +18,10 @@
 		4EF19E8E24821F06001D478A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF19E8D24821F06001D478A /* Assets.xcassets */; };
 		4EF19E9124821F06001D478A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF19E9024821F06001D478A /* Preview Assets.xcassets */; };
 		4EF19E9624821F06001D478A /* TestXCFrameworkWatchUI.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4EF19E7224821F05001D478A /* TestXCFrameworkWatchUI.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4EF19EA524822096001D478A /* UniKitWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19EA324822091001D478A /* UniKitWatch.framework */; };
-		4EF19EA624822096001D478A /* UniKitWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19EA324822091001D478A /* UniKitWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4EF19EBE24822730001D478A /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; };
+		4EF19EBF24822730001D478A /* UniKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4EF19EC1248227A3001D478A /* UniKitWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19EC0248227A3001D478A /* UniKitWatch.framework */; };
+		4EF19EC2248227A3001D478A /* UniKitWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19EC0248227A3001D478A /* UniKitWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4EF564252481F39E00564840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564242481F39E00564840 /* AppDelegate.swift */; };
 		4EF564272481F39E00564840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564262481F39E00564840 /* SceneDelegate.swift */; };
 		4EF564292481F39E00564840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564282481F39E00564840 /* ContentView.swift */; };
@@ -48,17 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4EF19E6F24821E15001D478A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4EF19E6E24821E15001D478A /* UniKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4EF19E9A24821F06001D478A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,13 +70,24 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EF19EA724822096001D478A /* Embed Frameworks */ = {
+		4EF19EBB248226C3001D478A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4EF19EA624822096001D478A /* UniKitWatch.framework in Embed Frameworks */,
+				4EF19EBF24822730001D478A /* UniKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EF19EC3248227A3001D478A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4EF19EC2248227A3001D478A /* UniKitWatch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +111,7 @@
 		4EF19E9224821F06001D478A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EF19E9324821F06001D478A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4EF19E9F24821F78001D478A /* UniKitWatch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKitWatch.xcframework; path = Frameworks/watchOS/UniKitWatch.xcframework; sourceTree = "<group>"; };
-		4EF19EA324822091001D478A /* UniKitWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniKitWatch.framework; path = Frameworks/watchOS/UniKitWatch.framework; sourceTree = "<group>"; };
+		4EF19EC0248227A3001D478A /* UniKitWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniKitWatch.framework; path = Frameworks/watchOS/UniKitWatch.framework; sourceTree = "<group>"; };
 		4EF564212481F39E00564840 /* TestXCFrameworkiOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXCFrameworkiOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF564242481F39E00564840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF564262481F39E00564840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF19EA524822096001D478A /* UniKitWatch.framework in Frameworks */,
+				4EF19EC1248227A3001D478A /* UniKitWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF19E6D24821E15001D478A /* UniKit.xcframework in Frameworks */,
+				4EF19EBE24822730001D478A /* UniKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +145,7 @@
 		4EF19E6B24821E15001D478A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EF19EC0248227A3001D478A /* UniKitWatch.framework */,
 				4EF19E9F24821F78001D478A /* UniKitWatch.xcframework */,
 				4EF19E6C24821E15001D478A /* UniKit.xcframework */,
 			);
@@ -188,7 +189,6 @@
 		4EF564182481F39E00564840 = {
 			isa = PBXGroup;
 			children = (
-				4EF19EA324822091001D478A /* UniKitWatch.framework */,
 				4EF564232481F39E00564840 /* TestXCFrameworkiOSUI */,
 				4EF19E7324821F05001D478A /* TestXCFrameworkWatchUI */,
 				4EF19E8224821F06001D478A /* TestXCFrameworkWatchUI Extension */,
@@ -256,7 +256,7 @@
 				4EF19E7A24821F06001D478A /* Sources */,
 				4EF19E7B24821F06001D478A /* Frameworks */,
 				4EF19E7C24821F06001D478A /* Resources */,
-				4EF19EA724822096001D478A /* Embed Frameworks */,
+				4EF19EC3248227A3001D478A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,8 +274,8 @@
 				4EF5641D2481F39E00564840 /* Sources */,
 				4EF5641E2481F39E00564840 /* Frameworks */,
 				4EF5641F2481F39E00564840 /* Resources */,
-				4EF19E6F24821E15001D478A /* Embed Frameworks */,
 				4EF19E9E24821F06001D478A /* Embed Watch Content */,
+				4EF19EBB248226C3001D478A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -633,6 +633,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFrameworkiOSUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
+				);
 				INFOPLIST_FILE = TestXCFrameworkiOSUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,6 +659,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFrameworkiOSUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
+				);
 				INFOPLIST_FILE = TestXCFrameworkiOSUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		R+9brTI91XKPjiNwY2e54ulZgLI=
+		0ZlkvkBATWDpE2j2dnuvnPgEe/s=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		CuFT+zz9mlZj2u4UjvUHjwBct8U=
+		t4WPI0wIVu+toCamwN4yx0+TPA8=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		0QcV+2EGUvFyove+7Ip5BdsZwPE=
+		KzsPBiOF6Z1qbW+1uz6hPfR6C0Y=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		do9dWteCXLTaQ8YFMr8LTbl8o/A=
+		434EUnXKJvJ/aTZ2dVpmCFUY8C0=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftdoc</key>
 		<data>
-		CuFT+zz9mlZj2u4UjvUHjwBct8U=
+		t4WPI0wIVu+toCamwN4yx0+TPA8=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftinterface</key>
 		<data>
-		0QcV+2EGUvFyove+7Ip5BdsZwPE=
+		KzsPBiOF6Z1qbW+1uz6hPfR6C0Y=
 		</data>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftmodule</key>
 		<data>
-		do9dWteCXLTaQ8YFMr8LTbl8o/A=
+		434EUnXKJvJ/aTZ2dVpmCFUY8C0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E4XGd1CfNAhFiutTqVVvu32Yl662cH+bonMqvJUaO9k=
+			e7Qo96NUxDDbYNMF0cmEmsDa2oHVbiTcawYOZPyUWkQ=
 			</data>
 		</dict>
 		<key>Modules/UniKitWatch.swiftmodule/i386-apple-watchos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RvfjXZgo32XtZ9buVgpVvwHSi3F2TAE324lirhTqLpM=
+			qytHGZTI2cETIo6MsPlWTHNbYqrpSotkF9f1OE2ZrF4=
 			</data>
 		</dict>
 		<key>Modules/UniKitWatch.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vedwEdUrbcHYN+IAa1xXb3NxZADYkLbuwWlE2XGbtHs=
+			A6NfgT617jHXTtvXY8sXmzPlNfM/ZO0ACoVgzILblTU=
 			</data>
 		</dict>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E4XGd1CfNAhFiutTqVVvu32Yl662cH+bonMqvJUaO9k=
+			e7Qo96NUxDDbYNMF0cmEmsDa2oHVbiTcawYOZPyUWkQ=
 			</data>
 		</dict>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RvfjXZgo32XtZ9buVgpVvwHSi3F2TAE324lirhTqLpM=
+			qytHGZTI2cETIo6MsPlWTHNbYqrpSotkF9f1OE2ZrF4=
 			</data>
 		</dict>
 		<key>Modules/UniKitWatch.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vedwEdUrbcHYN+IAa1xXb3NxZADYkLbuwWlE2XGbtHs=
+			A6NfgT617jHXTtvXY8sXmzPlNfM/ZO0ACoVgzILblTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
