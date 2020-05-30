@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		4EF563EE2481E6EC00564840 /* XCFrameworks */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4EF563F12481E6EC00564840 /* Build configuration list for PBXAggregateTarget "XCFrameworks" */;
+			buildPhases = (
+				4EF563F22481E6F300564840 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = XCFrameworks;
+			productName = XCFrameworks;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		4E30AB7122EFCAFF008FDE7A /* UniKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E30AB6F22EFCAFF008FDE7A /* UniKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E99260522F107AE00B2401F /* UniKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99260422F107AE00B2401F /* UniKit.swift */; };
@@ -108,6 +122,9 @@
 					4E30AB6B22EFCAFF008FDE7A = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					4EF563EE2481E6EC00564840 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 				};
 			};
 			buildConfigurationList = 4E30AB6622EFCAFF008FDE7A /* Build configuration list for PBXProject "UniKit" */;
@@ -124,6 +141,7 @@
 			projectRoot = "";
 			targets = (
 				4E30AB6B22EFCAFF008FDE7A /* UniKit */,
+				4EF563EE2481E6EC00564840 /* XCFrameworks */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +173,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#In Xcode, the framework search path build setting determines where the linker looks for frameworks at link time. Since your app target attempts to link to RealmSwift.framework (as a result of importing ParentFramework), RealmSwift.framework needs to be available on the framework search path.\n\n#It's important to note that while nested frameworks work in the iOS simulator and even locally on your device, iTunes Connect rejects app bundles that contain nested frameworks. The expected pattern is that all frameworks are embedded directly within the app.\n\necho \"*** Copying the framework ***\"\n\nPRODUCT_PATH=\"${BUILT_PRODUCTS_DIR}/${PROJECT_NAME}.framework\"\n\nFRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nrm -rf \"${FRAMEWORK_PATH}\"\nmkdir \"${FRAMEWORK_PATH}\"\n\ncp -r \"${PRODUCT_PATH}\" \"${FRAMEWORK_PATH}/${PROJECT_NAME}.framework\"\n";
+		};
+		4EF563F22481E6F300564840 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"generic/platform=iOS\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=iOS Simulator,name=iPhone 11\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}\" -destination \"platform=macOS,variant=Mac Catalyst\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.iOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}.xcframework\"\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -346,6 +381,24 @@
 			};
 			name = Release;
 		};
+		4EF563EF2481E6EC00564840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4EF563F02481E6EC00564840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,6 +416,15 @@
 			buildConfigurations = (
 				4E30AB7522EFCAFF008FDE7A /* Debug */,
 				4E30AB7622EFCAFF008FDE7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF563F12481E6EC00564840 /* Build configuration list for PBXAggregateTarget "XCFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF563EF2481E6EC00564840 /* Debug */,
+				4EF563F02481E6EC00564840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
