@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		4EF19EA824822265001D478A /* XCWatchFrameworks */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4EF19EAB24822265001D478A /* Build configuration list for PBXAggregateTarget "XCWatchFrameworks" */;
+			buildPhases = (
+				4EF19EAC24822279001D478A /* Create watchOS XCFramework */,
+			);
+			dependencies = (
+			);
+			name = XCWatchFrameworks;
+			productName = XCWatchFrameworks;
+		};
 		4EF563EE2481E6EC00564840 /* XCFrameworks */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 4EF563F12481E6EC00564840 /* Build configuration list for PBXAggregateTarget "XCFrameworks" */;
 			buildPhases = (
 				4EF563F22481E6F300564840 /* Create iOS macOS XCFramework */,
-				4EB32D88248207330060D50E /* Create watchOS XCFramework */,
 			);
 			dependencies = (
 			);
@@ -176,6 +186,9 @@
 					4EB32D8D248209C10060D50E = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					4EF19EA824822265001D478A = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					4EF563EE2481E6EC00564840 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -197,6 +210,7 @@
 				4E30AB6B22EFCAFF008FDE7A /* UniKit */,
 				4EB32D8D248209C10060D50E /* UniKitWatch */,
 				4EF563EE2481E6EC00564840 /* XCFrameworks */,
+				4EF19EA824822265001D478A /* XCWatchFrameworks */,
 			);
 		};
 /* End PBXProject section */
@@ -237,24 +251,6 @@
 			shellPath = /bin/sh;
 			shellScript = "#In Xcode, the framework search path build setting determines where the linker looks for frameworks at link time. Since your app target attempts to link to RealmSwift.framework (as a result of importing ParentFramework), RealmSwift.framework needs to be available on the framework search path.\n\n#It's important to note that while nested frameworks work in the iOS simulator and even locally on your device, iTunes Connect rejects app bundles that contain nested frameworks. The expected pattern is that all frameworks are embedded directly within the app.\n\necho \"*** Copying the framework ***\"\n\nPRODUCT_PATH=\"${BUILT_PRODUCTS_DIR}/${PROJECT_NAME}.framework\"\n\nFRAMEWORK_PATH=\"${SRCROOT}/Frameworks/iOS\"\nrm -rf \"${FRAMEWORK_PATH}\"\nmkdir \"${FRAMEWORK_PATH}\"\n\ncp -r \"${PRODUCT_PATH}\" \"${FRAMEWORK_PATH}/${PROJECT_NAME}.framework\"\n";
 		};
-		4EB32D88248207330060D50E /* Create watchOS XCFramework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Create watchOS XCFramework";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks/watchOS\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchos -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchsimulator -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\n";
-		};
 		4EB32D9824820BA00060D50E /* Distribute Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +268,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#In Xcode, the framework search path build setting determines where the linker looks for frameworks at link time. Since your app target attempts to link to RealmSwift.framework (as a result of importing ParentFramework), RealmSwift.framework needs to be available on the framework search path.\n\n#It's important to note that while nested frameworks work in the iOS simulator and even locally on your device, iTunes Connect rejects app bundles that contain nested frameworks. The expected pattern is that all frameworks are embedded directly within the app.\n\necho \"*** Copying the framework ***\"\n\nPRODUCT_PATH=\"${BUILT_PRODUCTS_DIR}/${PROJECT_NAME}Watch.framework\"\n\nFRAMEWORK_PATH=\"${SRCROOT}/Frameworks/watchOS\"\nrm -rf \"${FRAMEWORK_PATH}\"\nmkdir \"${FRAMEWORK_PATH}\"\n\ncp -r \"${PRODUCT_PATH}\" \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.framework\"\n\n";
+		};
+		4EF19EAC24822279001D478A /* Create watchOS XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create watchOS XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_PATH=\"${SRCROOT}/Frameworks/watchOS\"\nif [ -d \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\" ]; then\necho \"*** Removing ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nrm -rd \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\nfi\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchos -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive\" SKIP_INSTALL=NO\nxcodebuild archive -scheme \"${PROJECT_NAME}Watch\" -sdk watchsimulator -destination \"name=Apple Watch Series 4 - 44mm\" -archivePath \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive\" SKIP_INSTALL=NO\necho \"*** Creating ${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework ***\"\nxcodebuild -create-xcframework -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -framework \"$TEMP_DIR/${PROJECT_NAME}.watchOS-simulator.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}Watch.framework\" -output \"${FRAMEWORK_PATH}/${PROJECT_NAME}Watch.xcframework\"\n\n";
 		};
 		4EF563F22481E6F300564840 /* Create iOS macOS XCFramework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -457,6 +471,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.UniKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -506,6 +521,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.UniKitWatch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
@@ -543,11 +559,33 @@
 			};
 			name = Release;
 		};
+		4EF19EA924822265001D478A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Debug;
+		};
+		4EF19EAA24822265001D478A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Release;
+		};
 		4EF563EF2481E6EC00564840 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -587,6 +625,15 @@
 			buildConfigurations = (
 				4EB32D94248209C10060D50E /* Debug */,
 				4EB32D95248209C10060D50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF19EAB24822265001D478A /* Build configuration list for PBXAggregateTarget "XCWatchFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF19EA924822265001D478A /* Debug */,
+				4EF19EAA24822265001D478A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
