@@ -1,0 +1,10 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UniKit
+import Foundation
+import Swift
+@_exported import UniKit
+@_hasMissingDesignatedInitializers public class UniKit {
+  public static func hello(_ name: Swift.String) -> Swift.String
+  @objc deinit
+}

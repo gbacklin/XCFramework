@@ -7,32 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EF19E6D24821E15001D478A /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; };
-		4EF19E6E24821E15001D478A /* UniKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF19E6C24821E15001D478A /* UniKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4EF564252481F39E00564840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564242481F39E00564840 /* AppDelegate.swift */; };
 		4EF564272481F39E00564840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564262481F39E00564840 /* SceneDelegate.swift */; };
 		4EF564292481F39E00564840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564282481F39E00564840 /* ContentView.swift */; };
 		4EF5642B2481F3A000564840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF5642A2481F3A000564840 /* Assets.xcassets */; };
 		4EF5642E2481F3A000564840 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF5642D2481F3A000564840 /* Preview Assets.xcassets */; };
 		4EF564312481F3A000564840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF5642F2481F3A000564840 /* LaunchScreen.storyboard */; };
+		4EF564392481F3B000564840 /* UniKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF564382481F3B000564840 /* UniKit.xcframework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4EF19E6F24821E15001D478A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4EF19E6E24821E15001D478A /* UniKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		4EF19E6C24821E15001D478A /* UniKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKit.xcframework; path = Frameworks/iOS/UniKit.xcframework; sourceTree = "<group>"; };
 		4EF564212481F39E00564840 /* TestXCFrameworkiOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXCFrameworkiOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF564242481F39E00564840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF564262481F39E00564840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +25,7 @@
 		4EF5642D2481F3A000564840 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4EF564302481F3A000564840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EF564322481F3A000564840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EF564382481F3B000564840 /* UniKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKit.xcframework; path = ../UniKit/Frameworks/UniKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,27 +33,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF19E6D24821E15001D478A /* UniKit.xcframework in Frameworks */,
+				4EF564392481F3B000564840 /* UniKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4EF19E6B24821E15001D478A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4EF19E6C24821E15001D478A /* UniKit.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4EF564182481F39E00564840 = {
 			isa = PBXGroup;
 			children = (
+				4EF564382481F3B000564840 /* UniKit.xcframework */,
 				4EF564232481F39E00564840 /* TestXCFrameworkiOSUI */,
 				4EF564222481F39E00564840 /* Products */,
-				4EF19E6B24821E15001D478A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +89,6 @@
 				4EF5641D2481F39E00564840 /* Sources */,
 				4EF5641E2481F39E00564840 /* Frameworks */,
 				4EF5641F2481F39E00564840 /* Resources */,
-				4EF19E6F24821E15001D478A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -317,7 +293,6 @@
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestXCFrameworkiOSUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +313,6 @@
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestXCFrameworkiOSUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
