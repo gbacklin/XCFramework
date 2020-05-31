@@ -1,0 +1,11 @@
+framework module UtilKit {
+  umbrella header "UtilKit.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilKit.Swift {
+    header "UtilKit-Swift.h"
+    requires objc
+}
