@@ -20,8 +20,8 @@
 		4E7810DD2483367800A07B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7810DC2483367800A07B77 /* Assets.xcassets */; };
 		4E7810E02483367800A07B77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7810DF2483367800A07B77 /* Preview Assets.xcassets */; };
 		4E7810E52483367800A07B77 /* TestXCFrameworkWatchOSUI.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E7810C12483367700A07B77 /* TestXCFrameworkWatchOSUI.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4EE8E62424833E9400152988 /* UniKitWatch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7810EE2483368F00A07B77 /* UniKitWatch.xcframework */; };
-		4EE8E62524833E9400152988 /* UniKitWatch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7810EE2483368F00A07B77 /* UniKitWatch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4EE8E63D24834E1200152988 /* UniKitWatch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE8E63924834D1200152988 /* UniKitWatch.xcframework */; };
+		4EE8E63E24834E1200152988 /* UniKitWatch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE8E63924834D1200152988 /* UniKitWatch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4EF564252481F39E00564840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564242481F39E00564840 /* AppDelegate.swift */; };
 		4EF564272481F39E00564840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564262481F39E00564840 /* SceneDelegate.swift */; };
 		4EF564292481F39E00564840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF564282481F39E00564840 /* ContentView.swift */; };
@@ -81,13 +81,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EE8E62624833E9400152988 /* Embed Frameworks */ = {
+		4EE8E63F24834E1200152988 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4EE8E62524833E9400152988 /* UniKitWatch.xcframework in Embed Frameworks */,
+				4EE8E63E24834E1200152988 /* UniKitWatch.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +111,8 @@
 		4E7810E12483367800A07B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7810E22483367800A07B77 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4E7810EE2483368F00A07B77 /* UniKitWatch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniKitWatch.xcframework; path = ../UniKit/Frameworks/watchOS/UniKitWatch.xcframework; sourceTree = "<group>"; };
+		4EE8E62B24834A7D00152988 /* UniKitWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniKitWatch.framework; path = ../UniKit/Frameworks/watchOS/UniKitWatch.framework; sourceTree = "<group>"; };
+		4EE8E63924834D1200152988 /* UniKitWatch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UniKitWatch.xcframework; sourceTree = "<group>"; };
 		4EF564212481F39E00564840 /* TestXCFrameworkiOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXCFrameworkiOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF564242481F39E00564840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF564262481F39E00564840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE8E62424833E9400152988 /* UniKitWatch.xcframework in Frameworks */,
+				4EE8E63D24834E1200152988 /* UniKitWatch.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,7 @@
 		4E7810BA248335EA00A07B77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EE8E62B24834A7D00152988 /* UniKitWatch.framework */,
 				4E7810EE2483368F00A07B77 /* UniKitWatch.xcframework */,
 				4E7810BB248335EA00A07B77 /* UniKit.xcframework */,
 			);
@@ -187,6 +190,7 @@
 		4EF564182481F39E00564840 = {
 			isa = PBXGroup;
 			children = (
+				4EE8E63924834D1200152988 /* UniKitWatch.xcframework */,
 				4EF564232481F39E00564840 /* TestXCFrameworkiOSUI */,
 				4E7810C22483367700A07B77 /* TestXCFrameworkWatchOSUI */,
 				4E7810D12483367800A07B77 /* TestXCFrameworkWatchOSUI Extension */,
@@ -254,7 +258,7 @@
 				4E7810C92483367800A07B77 /* Sources */,
 				4E7810CA2483367800A07B77 /* Frameworks */,
 				4E7810CB2483367800A07B77 /* Resources */,
-				4EE8E62624833E9400152988 /* Embed Frameworks */,
+				4EE8E63F24834E1200152988 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,6 +428,7 @@
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				IBSC_MODULE = TestXCFrameworkWatchOSUI_Extension;
 				INFOPLIST_FILE = TestXCFrameworkWatchOSUI/Info.plist;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.TestXCFrameworkiOSUI.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -461,12 +466,17 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFrameworkWatchOSUI Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "TestXCFrameworkWatchOSUI Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marizack.TestXCFrameworkiOSUI.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -485,6 +495,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFrameworkWatchOSUI Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "TestXCFrameworkWatchOSUI Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
