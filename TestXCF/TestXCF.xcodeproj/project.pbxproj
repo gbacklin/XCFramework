@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2F737924837CC70003AD08 /* UtilKitWatch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2F737624837C1C0003AD08 /* UtilKitWatch.xcframework */; };
+		4E2F737A24837CC70003AD08 /* UtilKitWatch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2F737624837C1C0003AD08 /* UtilKitWatch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4E9DD2CE2483535F00A913F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DD2CD2483535F00A913F7 /* AppDelegate.swift */; };
 		4E9DD2D02483535F00A913F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DD2CF2483535F00A913F7 /* SceneDelegate.swift */; };
 		4E9DD2D22483535F00A913F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DD2D12483535F00A913F7 /* ContentView.swift */; };
@@ -26,8 +28,6 @@
 		4E9DD33924835BE100A913F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9DD33824835BE100A913F7 /* Assets.xcassets */; };
 		4E9DD33C24835BE100A913F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9DD33B24835BE100A913F7 /* Preview Assets.xcassets */; };
 		4E9DD34124835BE100A913F7 /* TestXCFWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E9DD31D24835BDE00A913F7 /* TestXCFWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4E9DD3552483620700A913F7 /* UtilKitWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9DD3532483620400A913F7 /* UtilKitWatch.framework */; };
-		4E9DD3562483620700A913F7 /* UtilKitWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9DD3532483620400A913F7 /* UtilKitWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4E2F737B24837CC70003AD08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4E2F737A24837CC70003AD08 /* UtilKitWatch.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E9DD31A24835B5200A913F7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,20 +92,10 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9DD3572483620700A913F7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4E9DD3562483620700A913F7 /* UtilKitWatch.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E2F737624837C1C0003AD08 /* UtilKitWatch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UtilKitWatch.xcframework; sourceTree = "<group>"; };
 		4E9DD2CA2483535F00A913F7 /* TestXCF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXCF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9DD2CD2483535F00A913F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9DD2CF2483535F00A913F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		4E9DD33D24835BE100A913F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9DD33E24835BE100A913F7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4E9DD34A24835C0000A913F7 /* UtilKitWatch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UtilKitWatch.xcframework; path = "../UtilKit/Frameworks-watchOS/UtilKitWatch.xcframework"; sourceTree = "<group>"; };
-		4E9DD3532483620400A913F7 /* UtilKitWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UtilKitWatch.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9DD3552483620700A913F7 /* UtilKitWatch.framework in Frameworks */,
+				4E2F737924837CC70003AD08 /* UtilKitWatch.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9DD34A24835C0000A913F7 /* UtilKitWatch.xcframework */,
+				4E2F737624837C1C0003AD08 /* UtilKitWatch.xcframework */,
 				4E9DD31724835B5200A913F7 /* UtilKit.xcframework */,
 			);
 			name = Frameworks;
@@ -207,7 +208,6 @@
 		4E9DD32D24835BE000A913F7 /* TestXCFWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4E9DD3532483620400A913F7 /* UtilKitWatch.framework */,
 				4E9DD32E24835BE000A913F7 /* ContentView.swift */,
 				4E9DD33024835BE000A913F7 /* HostingController.swift */,
 				4E9DD33224835BE000A913F7 /* ExtensionDelegate.swift */,
@@ -276,7 +276,7 @@
 				4E9DD32524835BE000A913F7 /* Sources */,
 				4E9DD32624835BE000A913F7 /* Frameworks */,
 				4E9DD32724835BE000A913F7 /* Resources */,
-				4E9DD3572483620700A913F7 /* Embed Frameworks */,
+				4E2F737B24837CC70003AD08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -537,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCF/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
@@ -561,7 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCF/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
@@ -585,7 +585,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFWatch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
@@ -616,7 +616,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"TestXCFWatch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				ENABLE_PREVIEWS = YES;
@@ -648,7 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				IBSC_MODULE = TestXCFWatch_Extension;
 				INFOPLIST_FILE = TestXCFWatch/Info.plist;
@@ -670,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 8DT5Y3HP4L;
 				IBSC_MODULE = TestXCFWatch_Extension;
 				INFOPLIST_FILE = TestXCFWatch/Info.plist;

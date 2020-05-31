@@ -1,0 +1,11 @@
+framework module UtilKitWatch {
+  umbrella header "UtilKitWatch.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilKitWatch.Swift {
+    header "UtilKitWatch-Swift.h"
+    requires objc
+}
